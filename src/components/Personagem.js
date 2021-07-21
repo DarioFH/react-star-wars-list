@@ -10,7 +10,7 @@ const Personagem = props => {
     <ul>
     {dados.map( (row, index) => (
     
-      <li style={{color: row.eye_color}} key={index}> {row.name} <button onClick={() => functionClick(index)}> Remover </button></li>
+      <li className={'flex-container space-between'} style={{color: row.eye_color}} key={index}><span> {row.name} </span> <button onClick={() => functionClick(index)}> Remover </button></li>
         
     ))}
     </ul>
