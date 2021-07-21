@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <div className={'container'}>
-      <h1> Listando: {toPrint.length} <button onClick={()=>loadPersons()} style={{backgroundColor: 'green' }}> Retornar </button> </h1>
+      <h1> Listando: {toPrint.length} <button onClick={()=>loadPersons()} style={{backgroundColor: 'green',marginLeft: 10, marginTop: 5  }}> Retornar </button> </h1>
       
       <Personagem dados={toPrint} functionClick={removeList} />
       

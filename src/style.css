@@ -18,14 +18,21 @@ ul{
 }
 
 button {
-	background-color:red;
-	border-radius:8px;
-	display:inline-block;
-	cursor:pointer;
-	color:white;
-	font-size:10px;
-	text-decoration:none;
+  background-color: red;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
   border: none;
+  padding: 7px 8px;
+  float: right;
+}
+
+button:hover {
+  background-color: #323232;
+  transition: 0.3s;
 }
 
 ul li{
