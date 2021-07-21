@@ -5,7 +5,7 @@
 }
 
 ul{
-	width: 100%;
+	width: 80%;
 }
 
 .container{
@@ -27,7 +27,6 @@ button {
   text-decoration: none;
   border: none;
   padding: 7px 8px;
-  float: right;
 }
 
 button:hover {
@@ -47,17 +46,6 @@ ul li{
 	padding: 10px;
 }
 
-.flex-start { 
-  justify-content: flex-start; 
-}
-
-.flex-end { 
-  justify-content: flex-end; 
-}  
-.flex-end li {
-  background: gold;
-}
-
 .center { 
   justify-content: center; 
 }  
@@ -72,29 +60,9 @@ ul li{
   background: lightgreen;
 }
 
-.space-around { 
-  justify-content: space-around; 
-}
-.space-around li {
-  background: hotpink; 
-}
-
-.space-evenly { 
-  justify-content: space-evenly; 
-}
-.space-evenly li {
-  background: #bada55; 
-}
-
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 60px;
-  height: 50px;
-  margin: 5px;
-  line-height: 50px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
+@media only screen and (max-device-width: 768px) {
+  .container {
+    max-width: 80%;
+    min-width: 80%;
+  }
 }
