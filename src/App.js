@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from "react";
 import "./style.css";
 import axios from 'axios';
+import Personagem from './components/Personagem'
 
 export default function App() {
   var [toPrint, setToPrint] = useState([])
@@ -13,9 +14,17 @@ export default function App() {
           setToPrint(res)
         },
         error => {
-          console.log('erro carai')
+          console.log('erro')
         }
         )
+  }
+
+  function removeList(id){
+    let newArr = []
+    toPrint.forEach( (row, index) => {
+      id!==index&&newArr.push(row)
+    })
+    setToPrint(newArr)
   }
 
   useEffect( () => {
@@ -26,8 +35,10 @@ export default function App() {
 
   return (
     <div>
-      <h1> Whinderson </h1>
-      {toPrint.map( (row, index) => (<h2 style={{color: row.eye_color}}> {row.name} </h2>))}
+      <h1> Listando: {toPrint.length} - <button onClick={()=>loadPersons()} style={{backgroundColor: 'green' }}> Retornar </button> </h1>
+      
+      <Personagem dados={toPrint} functionClick={removeList} />
+      
     </div>
   );
 }
