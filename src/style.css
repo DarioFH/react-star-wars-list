@@ -61,6 +61,9 @@ ul li{
 }
 
 @media only screen and (max-device-width: 768px) {
+  #root{
+    justify-content: flex-start;
+  }
   .container {
     max-width: 80%;
     min-width: 80%;
